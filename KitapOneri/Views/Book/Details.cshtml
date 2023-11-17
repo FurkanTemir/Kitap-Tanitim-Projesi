@@ -1,0 +1,17 @@
+﻿@model Book
+
+<div class="">
+    <span>@Model.BookName</span>
+    <img src="@Model.BookImage" width="200" height="250" alt="" />
+    <p>@Model.AuthorName</p>
+    <p>@Model.Category.CategoryName</p>
+    <p>@Model.BookDescription</p>
+   <a asp-action="KitapSil" asp-controller="Book" asp-route-bookId="@Model.BookId" method="post"> 
+    <button>Kitap Sil</button> </a>
+    <a asp-action="KitapUpdate" asp-controller="Book" asp-route-bookId="@Model.BookId" method="post">
+        <button>Kitap Update</button>
+    </a>
+</div>
+
+
+
